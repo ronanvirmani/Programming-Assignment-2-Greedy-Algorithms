@@ -61,14 +61,14 @@ Now say we have A' that evicts f instead of p at position i.
 Evicting f causes no future misses. A' has the same misses as A.
 
 **Case 2: Page p is requested at position k, and f is requested at position j, where k < j.**
-- At position k: A hits (p is in cache), A' misses
-- At position j: A misses (evicted f), A' hits (has f)
+- At position k: A hits, A' misses
+- At position j: A misses, A' hits
 
-A' trades one miss for one hit. Total misses unchanged.
+A' just exchanges one miss for one hit, leaving the total misses the same as before.
 
 **Case 3: Page p is never requested again, or is requested after f.**
 Keeping p instead of f gives A no benefit. A' has ≤ misses as A.
 
-**Conclusion:** In all the cases, A' has no more misses than A, and A' agrees with OPTFF on one more eviction. By repeated exchange, any optimal algorithm can be transformed to OPTFF without increasing misses.
+**Conclusion:** In all the cases, A' has no more misses than A, and A' agrees with OPTFF on one more eviction. By repeated exchange, any optimal algorithm can be transformed to OPTFF w/o increasing misses.
 
 Therefore OPTFF is optimal.
