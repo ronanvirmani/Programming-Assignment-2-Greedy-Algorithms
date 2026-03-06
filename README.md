@@ -30,7 +30,7 @@ python3 src/cache.py <input_file>
 
 **Does OPTFF have the fewest misses?** Yes, with all 3 tests.
 
-**How does FIFO compare to LRU?** LRU outperforms FIFO on test2 (22 vs 40 misses) due to temporal locality—pages 1 and 2 are accessed frequently, and LRU keeps them while FIFO evicts them. 
+**How does FIFO compare to LRU?** LRU outperforms FIFO on test2 (22 vs 40 misses) because pages 1 and 2 are accessed frequently, and LRU keeps them while FIFO evicts them. 
 
 ### Question 2: Bad Sequence for LRU
 
